@@ -821,13 +821,15 @@
       }
     };
 
+    // Garden affinity is strongest for scenery, light and gently flowing music.
+    // A map signals exploration, so it does not add garden points.
     const questions = [
       {
         title: '你最想前往哪個地方？',
         options: [
           { text: '燈火通明的宮廷舞會', scores: { ball: 2 } },
           { text: '安靜的湖畔小屋或私人書房', scores: { reader: 2, moon: 1 } },
-          { text: '霧氣瀰漫的森林，或一扇通往未知的門', scores: { forest: 2, explorer: 2, garden: 1 } }
+          { text: '霧氣瀰漫的森林，或一扇通往未知的門', scores: { forest: 2, explorer: 2, garden: 2 } }
         ]
       },
       {
@@ -835,7 +837,7 @@
         options: [
           { text: '華麗的空間與整齊流動的人群', scores: { ball: 2 } },
           { text: '柔和的燈光，以及可以一個人待著的角落', scores: { reader: 2, moon: 1, garden: 1 } },
-          { text: '意想不到的風景，或空氣中陌生的聲音', scores: { forest: 2, explorer: 2, garden: 1 } }
+          { text: '意想不到的風景，或空氣中陌生的聲音', scores: { forest: 2, explorer: 2, garden: 3 } }
         ]
       },
       {
@@ -850,7 +852,7 @@
         title: '旅途中突然下起雨，你停下腳步，會怎麼做？',
         options: [
           { text: '回到有燈火的室內，把淋濕的身體擦乾', scores: { ball: 2, reader: 1 } },
-          { text: '找地方躲雨，靜靜感受此刻的心情或光影', scores: { moon: 2, garden: 2, reader: 1 } },
+          { text: '找地方躲雨，靜靜感受此刻的心情或光影', scores: { moon: 2, garden: 3, reader: 1 } },
           { text: '穿上防雨外套，繼續往未知的地方探險', scores: { forest: 2, explorer: 2 } }
         ]
       },
@@ -867,14 +869,14 @@
         options: [
           { text: '一張精緻的舞會邀請卡', scores: { ball: 2 } },
           { text: '一封寫著私密心情的手寫信', scores: { reader: 2, moon: 2 } },
-          { text: '一張通往未知的地圖', scores: { forest: 2, explorer: 2, garden: 1 } }
+          { text: '一張通往未知的地圖', scores: { forest: 2, explorer: 2 } }
         ]
       },
       {
         title: '故事結束前，你想在哪種聲音裡多停留一會兒？',
         options: [
           { text: '結構清楚、帶著華麗與舞蹈感的音樂', scores: { ball: 2 } },
-          { text: '安靜、清晰、優雅流淌的音樂', scores: { reader: 2, garden: 1 } },
+          { text: '安靜、清晰、優雅流淌的音樂', scores: { reader: 2, garden: 3 } },
           { text: '情緒濃烈，或帶著遼闊／陌生感的音樂', scores: { moon: 2, forest: 2, explorer: 2 } }
         ]
       }
